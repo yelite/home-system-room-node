@@ -1,0 +1,17 @@
+[package]
+name = "home-system-room-node"
+version = "0.1.0"
+authors = ["Lite Ye <liteye859@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+bmp085 = "0.2.0"
+i2cdev = "0.4"
+lazy_static = "1.4"
+actix-web = "1.0"
+prometheus = "0.7"
+structopt = "0.3"
+
+[patch.crates-io.bmp085]
+git = 'https://github.com/celaus/rust-bmp085.git'
+branch = 'master'
