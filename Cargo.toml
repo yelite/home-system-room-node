@@ -9,7 +9,7 @@ bmp085 = "0.2.0"
 i2cdev = "0.4"
 lazy_static = "1.4"
 actix-web = "1.0"
-prometheus = "0.7"
+prometheus = { version = "0.7", features = ["process"] }
 structopt = "0.3"
 
 [patch.crates-io.bmp085]
