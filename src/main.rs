@@ -2,6 +2,7 @@ mod args;
 mod sensor;
 
 use actix_web::{web, App, HttpServer, Responder};
+use bytes::Bytes;
 use lazy_static::lazy_static;
 use prometheus::{register_gauge, Encoder, Gauge, Opts, TextEncoder, __register_gauge};
 
@@ -33,7 +34,7 @@ fn get_metrics() -> impl Responder {
     // Encode them to send.
     encoder.encode(&metric_families, &mut buffer).unwrap();
 
-    String::from_utf8(buffer).unwrap()
+    Bytes::from(buffer)
 }
 
 fn main() -> std::io::Result<()> {

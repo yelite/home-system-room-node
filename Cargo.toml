@@ -11,6 +11,7 @@ lazy_static = "1.4"
 actix-web = "1.0"
 prometheus = { version = "0.7", features = ["process"] }
 structopt = "0.3"
+bytes = "0.4"
 
 [patch.crates-io.bmp085]
 git = 'https://github.com/celaus/rust-bmp085.git'
