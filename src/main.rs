@@ -4,7 +4,7 @@ mod sensor;
 use actix_web::{web, App, HttpServer, Responder};
 use bytes::Bytes;
 use lazy_static::lazy_static;
-use prometheus::{register_gauge, Encoder, Gauge, Opts, TextEncoder, __register_gauge};
+use prometheus::{register_gauge, Encoder, Gauge, Opts, TextEncoder};
 
 lazy_static! {
     static ref TEMPERATURE_GAUGE: Gauge =

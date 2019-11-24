@@ -9,10 +9,14 @@ bmp085 = "0.2.0"
 i2cdev = "0.4"
 lazy_static = "1.4"
 actix-web = "1.0"
-prometheus = { version = "0.7", features = ["process"] }
+prometheus = { version = "0.8", features = ["process"] }
 structopt = "0.3"
 bytes = "0.4"
 
 [patch.crates-io.bmp085]
 git = 'https://github.com/celaus/rust-bmp085.git'
+branch = 'master'
+
+[patch.crates-io.prometheus]
+git = 'https://github.com/tikv/rust-prometheus.git'
 branch = 'master'
